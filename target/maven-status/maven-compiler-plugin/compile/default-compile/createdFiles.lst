@@ -1,0 +1,5 @@
+com\suntossh\restclient\vo\Quote.class
+com\suntossh\restclient\Application.class
+com\suntossh\restclient\vo\Value.class
+com\suntossh\restclient\RestClientUtility.class
+com\suntossh\jsfmanagedbeans\Employee.class

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+      <title><ui:insert name="title">Hello #{employee.empFirstName}</ui:insert></title>
+    </h:head>
+ 
+    <h:body>
+ 			#{employee.empFirstName} , #{employee.empLastName} is confirmed
+ 			<br/>
+ 			#{employee.empFirstName} , #{employee.empLastName} is from #{employee.empCountryName}
+ 			<br/>
+ 			#{employee.empFirstName} has following in family in #{employee.empCountryName}
+ 			<ul>
+ 			<ui:repeat var="famMembers" value="#{employee.familyMembers}">
+ 				<li>#{famMembers}</li>
+ 			</ui:repeat>
+ 			</ul>
+    </h:body>
+</html>

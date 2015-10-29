@@ -2,6 +2,10 @@ package com.suntossh.jsfmanagedbeans;
 
 import javax.faces.bean.ManagedBean;
 
+import org.springframework.web.client.RestTemplate;
+
+import com.suntossh.restclient.vo.Quote;
+
 @ManagedBean
 public class Employee {
 
@@ -13,6 +17,11 @@ public class Employee {
 
 	public Employee() {
 		empFirstName = "ShantiDevi";
+	   	System.out.println("Run in const Start");
+    	RestTemplate restTemplate = new RestTemplate();
+        Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+        System.out.println("Run in const Finished");
+        System.out.println(quote.toString());
 	}
 
 	public String[] getFamilyMembers() {
